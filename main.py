@@ -37,13 +37,14 @@ def convert(file_path: str):
         
         # On utilise la fonction d'énumération (après avoir cast en str on récupère la valeur numérique pour la périodicité (sample rate)).
         for j, instrument in enumerate(instruments):
+            
             entry = {
                 "name": instrument,
                 "updated": timestamp,
-                "unit": units[j],
-                "digital": digital_analog[j],
-                "rate": str(sample_rates[j]).split(' ')[0],
-                "value": measurements[j]
+                "unit": units[j] if not pd.isna(units[j]) else None,
+                "digital": digital_analog[j] if not pd.isna(digital_analog[j]) else None,
+                "rate": str(sample_rates[j]).split(' ')[0] if not pd.isna(sample_rates[j]) else None,
+                "value": measurements[j] if not pd.isna(measurements[j]) else None
             }
 
             data.append(entry)
