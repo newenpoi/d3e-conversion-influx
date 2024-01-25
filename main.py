@@ -1,110 +1,68 @@
 '''
-    Script pour transformer le fichier CSV en format compatible avec InfluxDB
+    Script pour transformer le fichier CSV en format compatible avec InfluxDB (JSON).
 '''
 
 import pandas as pd
 from datetime import datetime
 import json
 
-def convert_old(file_path: str):
-    # Lecture des premières lignes pour obtenir les en-têtes et les métadonnées (ce qu'on appelle les dataframes df).
-    metadata_df = pd.read_csv(file_path, nrows = 5)
+def convert(file_path: str):
+    # Charge le fichier csv et ignore les headers, on utilise le séparateur point virgule.
+    csv_data = pd.read_csv(file_path, header = None, sep = ';')
+    
+     # Le nom des instruments.
+    instruments = csv_data.iloc[1, 1:].values
 
-    # Extraction des en-têtes et des métadonnées.
-    sensor_names = metadata_df.iloc[0].tolist()
-    units = metadata_df.iloc[1].tolist()
-    data_types = metadata_df.iloc[2].tolist()
-    periodicity = metadata_df.iloc[3].tolist()
+    # Unités à parir de la ligne 3 (on compte à partir de zéro) et deuxième entrée (toujours à partir de zéro).
+    units = csv_data.iloc[2, 1:].values
+    
+    # Données s'il s'agit d'un instrument digital ou analogue.
+    digital_analog = csv_data.iloc[3, 1:].values  # Digital or Analog
+   
+    # Les fréquences.
+    sample_rates = csv_data.iloc[4, 1:].values  # Sample rates
 
-    print(sensor_names)
-    return
-
-    # Lecture du fichier CSV en ignorant les 5 premières lignes.
-    data_df = pd.read_csv(file_path, skiprows = 5)
-
-    # Préparation des données pour InfluxDB.
+    # On initialise une liste vide.
     data = []
 
-    for index, row in data_df.iterrows():
-        # Extraction et formatage de la date et de l'heure (supposons que c'est le premier élément de chaque ligne).
-        date_time_str = row.iloc[0]
+    # On procède chaque données du csv en commençant par la ligne 6.
+    for i in range(5, len(csv_data)):
+        row = csv_data.iloc[i, :].values
         
-        try:
-            time = datetime.strptime(date_time_str, " %H:%M:%S  %d/%m/%Y").isoformat() + "Z"
-        except ValueError:
-            # Ignorer les lignes où la date et l'heure ne sont pas valides.
-            print(f"Erreur lors du formatatge de la date à la ligne : {index}")
-            continue
+        # On sait que la première valeur est un timestamp (date heure) qu'on formatte.
+        timestamp = datetime.strptime(row[0], " %H:%M:%S  %d/%m/%Y").isoformat()
+        
+        # Les mesures après la première valeur.
+        measurements = row[1:]
+        
+        # On utilise la fonction d'énumération (après avoir cast en str on récupère la valeur numérique pour la périodicité (sample rate)).
+        for j, instrument in enumerate(instruments):
+            entry = {
+                "name": instrument,
+                "updated": timestamp,
+                "unit": units[j],
+                "digital": digital_analog[j],
+                "rate": str(sample_rates[j]).split(' ')[0],
+                "value": measurements[j]
+            }
 
-        # Traitement des valeurs de chaque capteur.
-        for i in range(1, len(row)):
-            print(f"Traitement de la valeur {i}...")
+            data.append(entry)
 
-            measurement = sensor_names[i]
-            value = row.iloc[i]
+    return json.dumps(data, indent = 4)
 
-            print(f"Mesure : {measurement} - Valeur : {value}")
-            
-            # Création d'un tag à partir de l'unité et du type de données.
-            tag = f"{units[i]}_{data_types[i]}" 
-            
-            data.append([measurement, tag, value, time])
-
-    # Création d'un nouveau DataFrame.
-    influxdb_df = pd.DataFrame(data, columns = ['measurement', 'tag', 'value', 'time'])
-
-    # Sauvegarde du nouveau fichier CSV.
-    output = 'influxdb.csv'
-    influxdb_df.to_csv(output, index = False)
-
-def convert(file_path: str):
-    '''
-        Réorganisation du DataFrame pour simplifier la structure de l'index et des en-têtes.
-    '''
-
-    # Ignorer les premières lignes qui ne sont pas des données et recharger le fichier CSV.
-    csv_data = pd.read_csv(file_path, skiprows = 4)
-
-    # Redéfinir les en-têtes de colonne
-    column_headers = ["time"] + [f"sensor_{i}" for i in range(1, len(csv_data.columns))]
-    csv_data.columns = column_headers
-
-    # Extraire à nouveau les entêtes de chaque colonne (cette fois-ci, ce sont les noms des capteurs).
-    headers = csv_data.columns.tolist()
-
-    # Réinitialiser la structure JSON.
-    json_data = []
-
-    # Parcourir chaque ligne du fichier CSV.
-    for index, row in csv_data.iterrows():
-        # Extraire l'heure et la date.
-        time = row["time"].strip()
-
-        # Initialiser la liste des valeurs pour ce moment.
-        values = []
-
-        # Parcourir chaque mesure (capteur).
-        for header in headers[1:]:  # Ignorer la première colonne 'time'.
-            # Pour cet exemple, nous n'avons pas les détails exacts de chaque capteur, on les simplifie.
-            value = row[header]
-            values.append({
-                "name": header,
-                "unit": "unknown",  # L'unité est inconnue dans cet exemple
-                "digital": 0,       # Supposons qu'il ne s'agit pas de valeurs numériques
-                "sample_rate": "unknown",  # Le taux d'échantillonnage est inconnu
-                "value": float(value) if not pd.isna(value) else None  # Gérer les valeurs NaN
-            })
-
-        # Ajouter cet instant temporel au JSON
-        json_data.append({"time": time, "values": values})
-
-    # Afficher un extrait du JSON pour vérification
-    json_excerpt = json.dumps(json_data[:2], indent = 4)  # Afficher les 2 premiers enregistrements pour vérification
-    print(json_excerpt)
+def save(json_data, output_file_path):
+    with open(output_file_path, 'w') as file:
+        file.write(json_data)
 
 # Amorce.
 if __name__ == "__main__":
     # Considère la variable comme le chemin passé en argument pour ce script.
     path = "example.csv"
     print("Appel à la conversion du fichier CSV veuillez patienter...")
-    convert(path)
+    
+    # Procède à la conversion.
+    data = convert(path)
+    print(data)
+
+    # Sauvegarde le fichier sur le disque.
+    # save(data, "output.json")
