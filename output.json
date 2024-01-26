@@ -1,47 +1,1682 @@
 [
     {
-        "timestamp": " 17:00:00  18/12/2023;12.11;12.39;10.50;1.11;8.89;-20.50;52;21;-20.11;-20.11;11.78;1.89;0;"
+        "name": "QUAI 2 EXPEDITION: U17 THER AIR",
+        "updated": "2023-12-18T17:00:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 12.11
     },
     {
-        "timestamp": " 17:01:00  18/12/2023;12.11;12.39;10.50;1.11;8.89;-20.50;52;21;-20.11;-20.11;11.78;1.89;0;"
+        "name": "QUAI 2 EXPEDITION: U77 THER AIR B",
+        "updated": "2023-12-18T17:00:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 12.39
     },
     {
-        "timestamp": " 17:02:00  18/12/2023;12.11;12.39;10.39;0.78;8.89;-20.39;52;22;-20.00;-20.22;11.78;1.39;0;"
+        "name": "SAS 3 HUILE: U17 THER AIR",
+        "updated": "2023-12-18T17:00:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 10.5
     },
     {
-        "timestamp": " 17:03:00  18/12/2023;12.11;12.39;10.39;0.78;8.89;-20.39;52;22;-20.00;-20.22;11.78;1.39;0;"
+        "name": "SAS 2 FRAIS: U17 THER AIR",
+        "updated": "2023-12-18T17:00:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 1.11
     },
     {
-        "timestamp": " 17:04:00  18/12/2023;12.11;12.39;10.39;0.78;8.89;-20.50;51;22;-20.22;-20.22;11.78;1.39;0;"
+        "name": "SAS 1 STOCKAGE: U17 THER AIR",
+        "updated": "2023-12-18T17:00:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 8.89
     },
     {
-        "timestamp": " 17:05:00  18/12/2023;12.11;12.39;10.39;0.78;8.89;-20.50;51;22;-20.22;-20.22;11.78;1.39;0;"
+        "name": "CF NEG EVAP 1 ET 2: U09 S5 TEMPERATURE",
+        "updated": "2023-12-18T17:00:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": -20.5
     },
     {
-        "timestamp": " 17:06:00  18/12/2023;12.11;12.39;10.39;0.78;8.89;-20.28;51;21;-19.78;-20.22;11.78;1.39;0;"
+        "name": "CF NEG EVAP 1 ET 2: U82 EEV OD % B",
+        "updated": "2023-12-18T17:00:00",
+        "unit": "%",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 52.0
     },
     {
-        "timestamp": " 17:07:00  18/12/2023;12.11;12.39;10.39;0.78;8.89;-20.28;51;21;-19.78;-20.22;11.78;1.39;0;"
+        "name": "CF NEG EVAP 1 ET 2: U23 EEV OD %",
+        "updated": "2023-12-18T17:00:00",
+        "unit": "%",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 21.0
     },
     {
-        "timestamp": " 17:08:00  18/12/2023;12.11;12.39;10.39;0.78;8.89;-20.39;50;21;-20.11;-20.22;11.78;1.39;0;"
+        "name": "CF NEG EVAP 1 ET 2: U75 S5 TEMPERATURE B",
+        "updated": "2023-12-18T17:00:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": -20.11
     },
     {
-        "timestamp": " 17:09:00  18/12/2023;12.11;12.39;10.39;0.78;8.89;-20.39;50;21;-20.11;-20.22;11.78;1.39;0;"
+        "name": "CF NEG EVAP 1 ET 2: U17 THER AIR",
+        "updated": "2023-12-18T17:00:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": -20.11
     },
     {
-        "timestamp": " 17:10:00  18/12/2023;12.11;12.39;10.39;0.78;8.89;-20.50;50;21;-20.22;-20.22;11.78;1.39;0;"
+        "name": "QUAI 1 RECEPTION: U17 THER AIR",
+        "updated": "2023-12-18T17:00:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 11.78
     },
     {
-        "timestamp": " 17:11:00  18/12/2023;12.11;12.39;10.39;0.78;8.89;-20.50;50;21;-20.22;-20.22;11.78;1.39;0;"
+        "name": "CF POSITIVE: U17 THER AIR",
+        "updated": "2023-12-18T17:00:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 1.89
     },
     {
-        "timestamp": " 17:12:00  18/12/2023;12.11;12.39;10.39;1.50;8.78;-20.39;49;21;-20.11;-20.11;11.78;2.00;0;"
+        "name": "DGS COMBLES NEGATIVE: GAS LEVEL PPM",
+        "updated": "2023-12-18T17:00:00",
+        "unit": null,
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 0.0
     },
     {
-        "timestamp": " 17:13:00  18/12/2023;12.11;12.39;10.39;1.50;8.78;-20.39;49;21;-20.11;-20.11;11.78;2.00;0;"
+        "name": "AKPC ROUBY: HEAT RECLAIM STATE",
+        "updated": "2023-12-18T17:00:00",
+        "unit": null,
+        "digital": null,
+        "rate": null,
+        "value": null
     },
     {
-        "timestamp": " 17:14:00  18/12/2023;12.11;12.39;10.39;1.50;8.78;-20.50;49;21;-20.22;-20.11;11.78;2.00;0;"
+        "name": "QUAI 2 EXPEDITION: U17 THER AIR",
+        "updated": "2023-12-18T17:01:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 12.11
+    },
+    {
+        "name": "QUAI 2 EXPEDITION: U77 THER AIR B",
+        "updated": "2023-12-18T17:01:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 12.39
+    },
+    {
+        "name": "SAS 3 HUILE: U17 THER AIR",
+        "updated": "2023-12-18T17:01:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 10.5
+    },
+    {
+        "name": "SAS 2 FRAIS: U17 THER AIR",
+        "updated": "2023-12-18T17:01:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 1.11
+    },
+    {
+        "name": "SAS 1 STOCKAGE: U17 THER AIR",
+        "updated": "2023-12-18T17:01:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 8.89
+    },
+    {
+        "name": "CF NEG EVAP 1 ET 2: U09 S5 TEMPERATURE",
+        "updated": "2023-12-18T17:01:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": -20.5
+    },
+    {
+        "name": "CF NEG EVAP 1 ET 2: U82 EEV OD % B",
+        "updated": "2023-12-18T17:01:00",
+        "unit": "%",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 52.0
+    },
+    {
+        "name": "CF NEG EVAP 1 ET 2: U23 EEV OD %",
+        "updated": "2023-12-18T17:01:00",
+        "unit": "%",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 21.0
+    },
+    {
+        "name": "CF NEG EVAP 1 ET 2: U75 S5 TEMPERATURE B",
+        "updated": "2023-12-18T17:01:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": -20.11
+    },
+    {
+        "name": "CF NEG EVAP 1 ET 2: U17 THER AIR",
+        "updated": "2023-12-18T17:01:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": -20.11
+    },
+    {
+        "name": "QUAI 1 RECEPTION: U17 THER AIR",
+        "updated": "2023-12-18T17:01:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 11.78
+    },
+    {
+        "name": "CF POSITIVE: U17 THER AIR",
+        "updated": "2023-12-18T17:01:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 1.89
+    },
+    {
+        "name": "DGS COMBLES NEGATIVE: GAS LEVEL PPM",
+        "updated": "2023-12-18T17:01:00",
+        "unit": null,
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 0.0
+    },
+    {
+        "name": "AKPC ROUBY: HEAT RECLAIM STATE",
+        "updated": "2023-12-18T17:01:00",
+        "unit": null,
+        "digital": null,
+        "rate": null,
+        "value": null
+    },
+    {
+        "name": "QUAI 2 EXPEDITION: U17 THER AIR",
+        "updated": "2023-12-18T17:02:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 12.11
+    },
+    {
+        "name": "QUAI 2 EXPEDITION: U77 THER AIR B",
+        "updated": "2023-12-18T17:02:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 12.39
+    },
+    {
+        "name": "SAS 3 HUILE: U17 THER AIR",
+        "updated": "2023-12-18T17:02:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 10.39
+    },
+    {
+        "name": "SAS 2 FRAIS: U17 THER AIR",
+        "updated": "2023-12-18T17:02:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 0.78
+    },
+    {
+        "name": "SAS 1 STOCKAGE: U17 THER AIR",
+        "updated": "2023-12-18T17:02:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 8.89
+    },
+    {
+        "name": "CF NEG EVAP 1 ET 2: U09 S5 TEMPERATURE",
+        "updated": "2023-12-18T17:02:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": -20.39
+    },
+    {
+        "name": "CF NEG EVAP 1 ET 2: U82 EEV OD % B",
+        "updated": "2023-12-18T17:02:00",
+        "unit": "%",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 52.0
+    },
+    {
+        "name": "CF NEG EVAP 1 ET 2: U23 EEV OD %",
+        "updated": "2023-12-18T17:02:00",
+        "unit": "%",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 22.0
+    },
+    {
+        "name": "CF NEG EVAP 1 ET 2: U75 S5 TEMPERATURE B",
+        "updated": "2023-12-18T17:02:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": -20.0
+    },
+    {
+        "name": "CF NEG EVAP 1 ET 2: U17 THER AIR",
+        "updated": "2023-12-18T17:02:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": -20.22
+    },
+    {
+        "name": "QUAI 1 RECEPTION: U17 THER AIR",
+        "updated": "2023-12-18T17:02:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 11.78
+    },
+    {
+        "name": "CF POSITIVE: U17 THER AIR",
+        "updated": "2023-12-18T17:02:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 1.39
+    },
+    {
+        "name": "DGS COMBLES NEGATIVE: GAS LEVEL PPM",
+        "updated": "2023-12-18T17:02:00",
+        "unit": null,
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 0.0
+    },
+    {
+        "name": "AKPC ROUBY: HEAT RECLAIM STATE",
+        "updated": "2023-12-18T17:02:00",
+        "unit": null,
+        "digital": null,
+        "rate": null,
+        "value": null
+    },
+    {
+        "name": "QUAI 2 EXPEDITION: U17 THER AIR",
+        "updated": "2023-12-18T17:03:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 12.11
+    },
+    {
+        "name": "QUAI 2 EXPEDITION: U77 THER AIR B",
+        "updated": "2023-12-18T17:03:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 12.39
+    },
+    {
+        "name": "SAS 3 HUILE: U17 THER AIR",
+        "updated": "2023-12-18T17:03:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 10.39
+    },
+    {
+        "name": "SAS 2 FRAIS: U17 THER AIR",
+        "updated": "2023-12-18T17:03:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 0.78
+    },
+    {
+        "name": "SAS 1 STOCKAGE: U17 THER AIR",
+        "updated": "2023-12-18T17:03:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 8.89
+    },
+    {
+        "name": "CF NEG EVAP 1 ET 2: U09 S5 TEMPERATURE",
+        "updated": "2023-12-18T17:03:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": -20.39
+    },
+    {
+        "name": "CF NEG EVAP 1 ET 2: U82 EEV OD % B",
+        "updated": "2023-12-18T17:03:00",
+        "unit": "%",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 52.0
+    },
+    {
+        "name": "CF NEG EVAP 1 ET 2: U23 EEV OD %",
+        "updated": "2023-12-18T17:03:00",
+        "unit": "%",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 22.0
+    },
+    {
+        "name": "CF NEG EVAP 1 ET 2: U75 S5 TEMPERATURE B",
+        "updated": "2023-12-18T17:03:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": -20.0
+    },
+    {
+        "name": "CF NEG EVAP 1 ET 2: U17 THER AIR",
+        "updated": "2023-12-18T17:03:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": -20.22
+    },
+    {
+        "name": "QUAI 1 RECEPTION: U17 THER AIR",
+        "updated": "2023-12-18T17:03:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 11.78
+    },
+    {
+        "name": "CF POSITIVE: U17 THER AIR",
+        "updated": "2023-12-18T17:03:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 1.39
+    },
+    {
+        "name": "DGS COMBLES NEGATIVE: GAS LEVEL PPM",
+        "updated": "2023-12-18T17:03:00",
+        "unit": null,
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 0.0
+    },
+    {
+        "name": "AKPC ROUBY: HEAT RECLAIM STATE",
+        "updated": "2023-12-18T17:03:00",
+        "unit": null,
+        "digital": null,
+        "rate": null,
+        "value": null
+    },
+    {
+        "name": "QUAI 2 EXPEDITION: U17 THER AIR",
+        "updated": "2023-12-18T17:04:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 12.11
+    },
+    {
+        "name": "QUAI 2 EXPEDITION: U77 THER AIR B",
+        "updated": "2023-12-18T17:04:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 12.39
+    },
+    {
+        "name": "SAS 3 HUILE: U17 THER AIR",
+        "updated": "2023-12-18T17:04:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 10.39
+    },
+    {
+        "name": "SAS 2 FRAIS: U17 THER AIR",
+        "updated": "2023-12-18T17:04:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 0.78
+    },
+    {
+        "name": "SAS 1 STOCKAGE: U17 THER AIR",
+        "updated": "2023-12-18T17:04:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 8.89
+    },
+    {
+        "name": "CF NEG EVAP 1 ET 2: U09 S5 TEMPERATURE",
+        "updated": "2023-12-18T17:04:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": -20.5
+    },
+    {
+        "name": "CF NEG EVAP 1 ET 2: U82 EEV OD % B",
+        "updated": "2023-12-18T17:04:00",
+        "unit": "%",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 51.0
+    },
+    {
+        "name": "CF NEG EVAP 1 ET 2: U23 EEV OD %",
+        "updated": "2023-12-18T17:04:00",
+        "unit": "%",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 22.0
+    },
+    {
+        "name": "CF NEG EVAP 1 ET 2: U75 S5 TEMPERATURE B",
+        "updated": "2023-12-18T17:04:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": -20.22
+    },
+    {
+        "name": "CF NEG EVAP 1 ET 2: U17 THER AIR",
+        "updated": "2023-12-18T17:04:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": -20.22
+    },
+    {
+        "name": "QUAI 1 RECEPTION: U17 THER AIR",
+        "updated": "2023-12-18T17:04:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 11.78
+    },
+    {
+        "name": "CF POSITIVE: U17 THER AIR",
+        "updated": "2023-12-18T17:04:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 1.39
+    },
+    {
+        "name": "DGS COMBLES NEGATIVE: GAS LEVEL PPM",
+        "updated": "2023-12-18T17:04:00",
+        "unit": null,
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 0.0
+    },
+    {
+        "name": "AKPC ROUBY: HEAT RECLAIM STATE",
+        "updated": "2023-12-18T17:04:00",
+        "unit": null,
+        "digital": null,
+        "rate": null,
+        "value": null
+    },
+    {
+        "name": "QUAI 2 EXPEDITION: U17 THER AIR",
+        "updated": "2023-12-18T17:05:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 12.11
+    },
+    {
+        "name": "QUAI 2 EXPEDITION: U77 THER AIR B",
+        "updated": "2023-12-18T17:05:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 12.39
+    },
+    {
+        "name": "SAS 3 HUILE: U17 THER AIR",
+        "updated": "2023-12-18T17:05:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 10.39
+    },
+    {
+        "name": "SAS 2 FRAIS: U17 THER AIR",
+        "updated": "2023-12-18T17:05:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 0.78
+    },
+    {
+        "name": "SAS 1 STOCKAGE: U17 THER AIR",
+        "updated": "2023-12-18T17:05:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 8.89
+    },
+    {
+        "name": "CF NEG EVAP 1 ET 2: U09 S5 TEMPERATURE",
+        "updated": "2023-12-18T17:05:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": -20.5
+    },
+    {
+        "name": "CF NEG EVAP 1 ET 2: U82 EEV OD % B",
+        "updated": "2023-12-18T17:05:00",
+        "unit": "%",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 51.0
+    },
+    {
+        "name": "CF NEG EVAP 1 ET 2: U23 EEV OD %",
+        "updated": "2023-12-18T17:05:00",
+        "unit": "%",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 22.0
+    },
+    {
+        "name": "CF NEG EVAP 1 ET 2: U75 S5 TEMPERATURE B",
+        "updated": "2023-12-18T17:05:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": -20.22
+    },
+    {
+        "name": "CF NEG EVAP 1 ET 2: U17 THER AIR",
+        "updated": "2023-12-18T17:05:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": -20.22
+    },
+    {
+        "name": "QUAI 1 RECEPTION: U17 THER AIR",
+        "updated": "2023-12-18T17:05:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 11.78
+    },
+    {
+        "name": "CF POSITIVE: U17 THER AIR",
+        "updated": "2023-12-18T17:05:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 1.39
+    },
+    {
+        "name": "DGS COMBLES NEGATIVE: GAS LEVEL PPM",
+        "updated": "2023-12-18T17:05:00",
+        "unit": null,
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 0.0
+    },
+    {
+        "name": "AKPC ROUBY: HEAT RECLAIM STATE",
+        "updated": "2023-12-18T17:05:00",
+        "unit": null,
+        "digital": null,
+        "rate": null,
+        "value": null
+    },
+    {
+        "name": "QUAI 2 EXPEDITION: U17 THER AIR",
+        "updated": "2023-12-18T17:06:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 12.11
+    },
+    {
+        "name": "QUAI 2 EXPEDITION: U77 THER AIR B",
+        "updated": "2023-12-18T17:06:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 12.39
+    },
+    {
+        "name": "SAS 3 HUILE: U17 THER AIR",
+        "updated": "2023-12-18T17:06:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 10.39
+    },
+    {
+        "name": "SAS 2 FRAIS: U17 THER AIR",
+        "updated": "2023-12-18T17:06:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 0.78
+    },
+    {
+        "name": "SAS 1 STOCKAGE: U17 THER AIR",
+        "updated": "2023-12-18T17:06:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 8.89
+    },
+    {
+        "name": "CF NEG EVAP 1 ET 2: U09 S5 TEMPERATURE",
+        "updated": "2023-12-18T17:06:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": -20.28
+    },
+    {
+        "name": "CF NEG EVAP 1 ET 2: U82 EEV OD % B",
+        "updated": "2023-12-18T17:06:00",
+        "unit": "%",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 51.0
+    },
+    {
+        "name": "CF NEG EVAP 1 ET 2: U23 EEV OD %",
+        "updated": "2023-12-18T17:06:00",
+        "unit": "%",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 21.0
+    },
+    {
+        "name": "CF NEG EVAP 1 ET 2: U75 S5 TEMPERATURE B",
+        "updated": "2023-12-18T17:06:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": -19.78
+    },
+    {
+        "name": "CF NEG EVAP 1 ET 2: U17 THER AIR",
+        "updated": "2023-12-18T17:06:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": -20.22
+    },
+    {
+        "name": "QUAI 1 RECEPTION: U17 THER AIR",
+        "updated": "2023-12-18T17:06:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 11.78
+    },
+    {
+        "name": "CF POSITIVE: U17 THER AIR",
+        "updated": "2023-12-18T17:06:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 1.39
+    },
+    {
+        "name": "DGS COMBLES NEGATIVE: GAS LEVEL PPM",
+        "updated": "2023-12-18T17:06:00",
+        "unit": null,
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 0.0
+    },
+    {
+        "name": "AKPC ROUBY: HEAT RECLAIM STATE",
+        "updated": "2023-12-18T17:06:00",
+        "unit": null,
+        "digital": null,
+        "rate": null,
+        "value": null
+    },
+    {
+        "name": "QUAI 2 EXPEDITION: U17 THER AIR",
+        "updated": "2023-12-18T17:07:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 12.11
+    },
+    {
+        "name": "QUAI 2 EXPEDITION: U77 THER AIR B",
+        "updated": "2023-12-18T17:07:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 12.39
+    },
+    {
+        "name": "SAS 3 HUILE: U17 THER AIR",
+        "updated": "2023-12-18T17:07:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 10.39
+    },
+    {
+        "name": "SAS 2 FRAIS: U17 THER AIR",
+        "updated": "2023-12-18T17:07:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 0.78
+    },
+    {
+        "name": "SAS 1 STOCKAGE: U17 THER AIR",
+        "updated": "2023-12-18T17:07:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 8.89
+    },
+    {
+        "name": "CF NEG EVAP 1 ET 2: U09 S5 TEMPERATURE",
+        "updated": "2023-12-18T17:07:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": -20.28
+    },
+    {
+        "name": "CF NEG EVAP 1 ET 2: U82 EEV OD % B",
+        "updated": "2023-12-18T17:07:00",
+        "unit": "%",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 51.0
+    },
+    {
+        "name": "CF NEG EVAP 1 ET 2: U23 EEV OD %",
+        "updated": "2023-12-18T17:07:00",
+        "unit": "%",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 21.0
+    },
+    {
+        "name": "CF NEG EVAP 1 ET 2: U75 S5 TEMPERATURE B",
+        "updated": "2023-12-18T17:07:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": -19.78
+    },
+    {
+        "name": "CF NEG EVAP 1 ET 2: U17 THER AIR",
+        "updated": "2023-12-18T17:07:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": -20.22
+    },
+    {
+        "name": "QUAI 1 RECEPTION: U17 THER AIR",
+        "updated": "2023-12-18T17:07:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 11.78
+    },
+    {
+        "name": "CF POSITIVE: U17 THER AIR",
+        "updated": "2023-12-18T17:07:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 1.39
+    },
+    {
+        "name": "DGS COMBLES NEGATIVE: GAS LEVEL PPM",
+        "updated": "2023-12-18T17:07:00",
+        "unit": null,
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 0.0
+    },
+    {
+        "name": "AKPC ROUBY: HEAT RECLAIM STATE",
+        "updated": "2023-12-18T17:07:00",
+        "unit": null,
+        "digital": null,
+        "rate": null,
+        "value": null
+    },
+    {
+        "name": "QUAI 2 EXPEDITION: U17 THER AIR",
+        "updated": "2023-12-18T17:08:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 12.11
+    },
+    {
+        "name": "QUAI 2 EXPEDITION: U77 THER AIR B",
+        "updated": "2023-12-18T17:08:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 12.39
+    },
+    {
+        "name": "SAS 3 HUILE: U17 THER AIR",
+        "updated": "2023-12-18T17:08:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 10.39
+    },
+    {
+        "name": "SAS 2 FRAIS: U17 THER AIR",
+        "updated": "2023-12-18T17:08:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 0.78
+    },
+    {
+        "name": "SAS 1 STOCKAGE: U17 THER AIR",
+        "updated": "2023-12-18T17:08:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 8.89
+    },
+    {
+        "name": "CF NEG EVAP 1 ET 2: U09 S5 TEMPERATURE",
+        "updated": "2023-12-18T17:08:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": -20.39
+    },
+    {
+        "name": "CF NEG EVAP 1 ET 2: U82 EEV OD % B",
+        "updated": "2023-12-18T17:08:00",
+        "unit": "%",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 50.0
+    },
+    {
+        "name": "CF NEG EVAP 1 ET 2: U23 EEV OD %",
+        "updated": "2023-12-18T17:08:00",
+        "unit": "%",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 21.0
+    },
+    {
+        "name": "CF NEG EVAP 1 ET 2: U75 S5 TEMPERATURE B",
+        "updated": "2023-12-18T17:08:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": -20.11
+    },
+    {
+        "name": "CF NEG EVAP 1 ET 2: U17 THER AIR",
+        "updated": "2023-12-18T17:08:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": -20.22
+    },
+    {
+        "name": "QUAI 1 RECEPTION: U17 THER AIR",
+        "updated": "2023-12-18T17:08:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 11.78
+    },
+    {
+        "name": "CF POSITIVE: U17 THER AIR",
+        "updated": "2023-12-18T17:08:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 1.39
+    },
+    {
+        "name": "DGS COMBLES NEGATIVE: GAS LEVEL PPM",
+        "updated": "2023-12-18T17:08:00",
+        "unit": null,
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 0.0
+    },
+    {
+        "name": "AKPC ROUBY: HEAT RECLAIM STATE",
+        "updated": "2023-12-18T17:08:00",
+        "unit": null,
+        "digital": null,
+        "rate": null,
+        "value": null
+    },
+    {
+        "name": "QUAI 2 EXPEDITION: U17 THER AIR",
+        "updated": "2023-12-18T17:09:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 12.11
+    },
+    {
+        "name": "QUAI 2 EXPEDITION: U77 THER AIR B",
+        "updated": "2023-12-18T17:09:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 12.39
+    },
+    {
+        "name": "SAS 3 HUILE: U17 THER AIR",
+        "updated": "2023-12-18T17:09:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 10.39
+    },
+    {
+        "name": "SAS 2 FRAIS: U17 THER AIR",
+        "updated": "2023-12-18T17:09:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 0.78
+    },
+    {
+        "name": "SAS 1 STOCKAGE: U17 THER AIR",
+        "updated": "2023-12-18T17:09:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 8.89
+    },
+    {
+        "name": "CF NEG EVAP 1 ET 2: U09 S5 TEMPERATURE",
+        "updated": "2023-12-18T17:09:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": -20.39
+    },
+    {
+        "name": "CF NEG EVAP 1 ET 2: U82 EEV OD % B",
+        "updated": "2023-12-18T17:09:00",
+        "unit": "%",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 50.0
+    },
+    {
+        "name": "CF NEG EVAP 1 ET 2: U23 EEV OD %",
+        "updated": "2023-12-18T17:09:00",
+        "unit": "%",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 21.0
+    },
+    {
+        "name": "CF NEG EVAP 1 ET 2: U75 S5 TEMPERATURE B",
+        "updated": "2023-12-18T17:09:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": -20.11
+    },
+    {
+        "name": "CF NEG EVAP 1 ET 2: U17 THER AIR",
+        "updated": "2023-12-18T17:09:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": -20.22
+    },
+    {
+        "name": "QUAI 1 RECEPTION: U17 THER AIR",
+        "updated": "2023-12-18T17:09:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 11.78
+    },
+    {
+        "name": "CF POSITIVE: U17 THER AIR",
+        "updated": "2023-12-18T17:09:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 1.39
+    },
+    {
+        "name": "DGS COMBLES NEGATIVE: GAS LEVEL PPM",
+        "updated": "2023-12-18T17:09:00",
+        "unit": null,
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 0.0
+    },
+    {
+        "name": "AKPC ROUBY: HEAT RECLAIM STATE",
+        "updated": "2023-12-18T17:09:00",
+        "unit": null,
+        "digital": null,
+        "rate": null,
+        "value": null
+    },
+    {
+        "name": "QUAI 2 EXPEDITION: U17 THER AIR",
+        "updated": "2023-12-18T17:10:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 12.11
+    },
+    {
+        "name": "QUAI 2 EXPEDITION: U77 THER AIR B",
+        "updated": "2023-12-18T17:10:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 12.39
+    },
+    {
+        "name": "SAS 3 HUILE: U17 THER AIR",
+        "updated": "2023-12-18T17:10:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 10.39
+    },
+    {
+        "name": "SAS 2 FRAIS: U17 THER AIR",
+        "updated": "2023-12-18T17:10:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 0.78
+    },
+    {
+        "name": "SAS 1 STOCKAGE: U17 THER AIR",
+        "updated": "2023-12-18T17:10:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 8.89
+    },
+    {
+        "name": "CF NEG EVAP 1 ET 2: U09 S5 TEMPERATURE",
+        "updated": "2023-12-18T17:10:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": -20.5
+    },
+    {
+        "name": "CF NEG EVAP 1 ET 2: U82 EEV OD % B",
+        "updated": "2023-12-18T17:10:00",
+        "unit": "%",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 50.0
+    },
+    {
+        "name": "CF NEG EVAP 1 ET 2: U23 EEV OD %",
+        "updated": "2023-12-18T17:10:00",
+        "unit": "%",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 21.0
+    },
+    {
+        "name": "CF NEG EVAP 1 ET 2: U75 S5 TEMPERATURE B",
+        "updated": "2023-12-18T17:10:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": -20.22
+    },
+    {
+        "name": "CF NEG EVAP 1 ET 2: U17 THER AIR",
+        "updated": "2023-12-18T17:10:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": -20.22
+    },
+    {
+        "name": "QUAI 1 RECEPTION: U17 THER AIR",
+        "updated": "2023-12-18T17:10:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 11.78
+    },
+    {
+        "name": "CF POSITIVE: U17 THER AIR",
+        "updated": "2023-12-18T17:10:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 1.39
+    },
+    {
+        "name": "DGS COMBLES NEGATIVE: GAS LEVEL PPM",
+        "updated": "2023-12-18T17:10:00",
+        "unit": null,
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 0.0
+    },
+    {
+        "name": "AKPC ROUBY: HEAT RECLAIM STATE",
+        "updated": "2023-12-18T17:10:00",
+        "unit": null,
+        "digital": null,
+        "rate": null,
+        "value": null
+    },
+    {
+        "name": "QUAI 2 EXPEDITION: U17 THER AIR",
+        "updated": "2023-12-18T17:11:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 12.11
+    },
+    {
+        "name": "QUAI 2 EXPEDITION: U77 THER AIR B",
+        "updated": "2023-12-18T17:11:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 12.39
+    },
+    {
+        "name": "SAS 3 HUILE: U17 THER AIR",
+        "updated": "2023-12-18T17:11:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 10.39
+    },
+    {
+        "name": "SAS 2 FRAIS: U17 THER AIR",
+        "updated": "2023-12-18T17:11:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 0.78
+    },
+    {
+        "name": "SAS 1 STOCKAGE: U17 THER AIR",
+        "updated": "2023-12-18T17:11:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 8.89
+    },
+    {
+        "name": "CF NEG EVAP 1 ET 2: U09 S5 TEMPERATURE",
+        "updated": "2023-12-18T17:11:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": -20.5
+    },
+    {
+        "name": "CF NEG EVAP 1 ET 2: U82 EEV OD % B",
+        "updated": "2023-12-18T17:11:00",
+        "unit": "%",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 50.0
+    },
+    {
+        "name": "CF NEG EVAP 1 ET 2: U23 EEV OD %",
+        "updated": "2023-12-18T17:11:00",
+        "unit": "%",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 21.0
+    },
+    {
+        "name": "CF NEG EVAP 1 ET 2: U75 S5 TEMPERATURE B",
+        "updated": "2023-12-18T17:11:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": -20.22
+    },
+    {
+        "name": "CF NEG EVAP 1 ET 2: U17 THER AIR",
+        "updated": "2023-12-18T17:11:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": -20.22
+    },
+    {
+        "name": "QUAI 1 RECEPTION: U17 THER AIR",
+        "updated": "2023-12-18T17:11:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 11.78
+    },
+    {
+        "name": "CF POSITIVE: U17 THER AIR",
+        "updated": "2023-12-18T17:11:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 1.39
+    },
+    {
+        "name": "DGS COMBLES NEGATIVE: GAS LEVEL PPM",
+        "updated": "2023-12-18T17:11:00",
+        "unit": null,
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 0.0
+    },
+    {
+        "name": "AKPC ROUBY: HEAT RECLAIM STATE",
+        "updated": "2023-12-18T17:11:00",
+        "unit": null,
+        "digital": null,
+        "rate": null,
+        "value": null
+    },
+    {
+        "name": "QUAI 2 EXPEDITION: U17 THER AIR",
+        "updated": "2023-12-18T17:12:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 12.11
+    },
+    {
+        "name": "QUAI 2 EXPEDITION: U77 THER AIR B",
+        "updated": "2023-12-18T17:12:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 12.39
+    },
+    {
+        "name": "SAS 3 HUILE: U17 THER AIR",
+        "updated": "2023-12-18T17:12:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 10.39
+    },
+    {
+        "name": "SAS 2 FRAIS: U17 THER AIR",
+        "updated": "2023-12-18T17:12:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 1.5
+    },
+    {
+        "name": "SAS 1 STOCKAGE: U17 THER AIR",
+        "updated": "2023-12-18T17:12:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 8.78
+    },
+    {
+        "name": "CF NEG EVAP 1 ET 2: U09 S5 TEMPERATURE",
+        "updated": "2023-12-18T17:12:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": -20.39
+    },
+    {
+        "name": "CF NEG EVAP 1 ET 2: U82 EEV OD % B",
+        "updated": "2023-12-18T17:12:00",
+        "unit": "%",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 49.0
+    },
+    {
+        "name": "CF NEG EVAP 1 ET 2: U23 EEV OD %",
+        "updated": "2023-12-18T17:12:00",
+        "unit": "%",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 21.0
+    },
+    {
+        "name": "CF NEG EVAP 1 ET 2: U75 S5 TEMPERATURE B",
+        "updated": "2023-12-18T17:12:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": -20.11
+    },
+    {
+        "name": "CF NEG EVAP 1 ET 2: U17 THER AIR",
+        "updated": "2023-12-18T17:12:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": -20.11
+    },
+    {
+        "name": "QUAI 1 RECEPTION: U17 THER AIR",
+        "updated": "2023-12-18T17:12:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 11.78
+    },
+    {
+        "name": "CF POSITIVE: U17 THER AIR",
+        "updated": "2023-12-18T17:12:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 2.0
+    },
+    {
+        "name": "DGS COMBLES NEGATIVE: GAS LEVEL PPM",
+        "updated": "2023-12-18T17:12:00",
+        "unit": null,
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 0.0
+    },
+    {
+        "name": "AKPC ROUBY: HEAT RECLAIM STATE",
+        "updated": "2023-12-18T17:12:00",
+        "unit": null,
+        "digital": null,
+        "rate": null,
+        "value": null
+    },
+    {
+        "name": "QUAI 2 EXPEDITION: U17 THER AIR",
+        "updated": "2023-12-18T17:13:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 12.11
+    },
+    {
+        "name": "QUAI 2 EXPEDITION: U77 THER AIR B",
+        "updated": "2023-12-18T17:13:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 12.39
+    },
+    {
+        "name": "SAS 3 HUILE: U17 THER AIR",
+        "updated": "2023-12-18T17:13:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 10.39
+    },
+    {
+        "name": "SAS 2 FRAIS: U17 THER AIR",
+        "updated": "2023-12-18T17:13:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 1.5
+    },
+    {
+        "name": "SAS 1 STOCKAGE: U17 THER AIR",
+        "updated": "2023-12-18T17:13:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 8.78
+    },
+    {
+        "name": "CF NEG EVAP 1 ET 2: U09 S5 TEMPERATURE",
+        "updated": "2023-12-18T17:13:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": -20.39
+    },
+    {
+        "name": "CF NEG EVAP 1 ET 2: U82 EEV OD % B",
+        "updated": "2023-12-18T17:13:00",
+        "unit": "%",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 49.0
+    },
+    {
+        "name": "CF NEG EVAP 1 ET 2: U23 EEV OD %",
+        "updated": "2023-12-18T17:13:00",
+        "unit": "%",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 21.0
+    },
+    {
+        "name": "CF NEG EVAP 1 ET 2: U75 S5 TEMPERATURE B",
+        "updated": "2023-12-18T17:13:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": -20.11
+    },
+    {
+        "name": "CF NEG EVAP 1 ET 2: U17 THER AIR",
+        "updated": "2023-12-18T17:13:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": -20.11
+    },
+    {
+        "name": "QUAI 1 RECEPTION: U17 THER AIR",
+        "updated": "2023-12-18T17:13:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 11.78
+    },
+    {
+        "name": "CF POSITIVE: U17 THER AIR",
+        "updated": "2023-12-18T17:13:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 2.0
+    },
+    {
+        "name": "DGS COMBLES NEGATIVE: GAS LEVEL PPM",
+        "updated": "2023-12-18T17:13:00",
+        "unit": null,
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 0.0
+    },
+    {
+        "name": "AKPC ROUBY: HEAT RECLAIM STATE",
+        "updated": "2023-12-18T17:13:00",
+        "unit": null,
+        "digital": null,
+        "rate": null,
+        "value": null
+    },
+    {
+        "name": "QUAI 2 EXPEDITION: U17 THER AIR",
+        "updated": "2023-12-18T17:14:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 12.11
+    },
+    {
+        "name": "QUAI 2 EXPEDITION: U77 THER AIR B",
+        "updated": "2023-12-18T17:14:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 12.39
+    },
+    {
+        "name": "SAS 3 HUILE: U17 THER AIR",
+        "updated": "2023-12-18T17:14:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 10.39
+    },
+    {
+        "name": "SAS 2 FRAIS: U17 THER AIR",
+        "updated": "2023-12-18T17:14:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 1.5
+    },
+    {
+        "name": "SAS 1 STOCKAGE: U17 THER AIR",
+        "updated": "2023-12-18T17:14:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 8.78
+    },
+    {
+        "name": "CF NEG EVAP 1 ET 2: U09 S5 TEMPERATURE",
+        "updated": "2023-12-18T17:14:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": -20.5
+    },
+    {
+        "name": "CF NEG EVAP 1 ET 2: U82 EEV OD % B",
+        "updated": "2023-12-18T17:14:00",
+        "unit": "%",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 49.0
+    },
+    {
+        "name": "CF NEG EVAP 1 ET 2: U23 EEV OD %",
+        "updated": "2023-12-18T17:14:00",
+        "unit": "%",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 21.0
+    },
+    {
+        "name": "CF NEG EVAP 1 ET 2: U75 S5 TEMPERATURE B",
+        "updated": "2023-12-18T17:14:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": -20.22
+    },
+    {
+        "name": "CF NEG EVAP 1 ET 2: U17 THER AIR",
+        "updated": "2023-12-18T17:14:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": -20.11
+    },
+    {
+        "name": "QUAI 1 RECEPTION: U17 THER AIR",
+        "updated": "2023-12-18T17:14:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 11.78
+    },
+    {
+        "name": "CF POSITIVE: U17 THER AIR",
+        "updated": "2023-12-18T17:14:00",
+        "unit": "degc",
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 2.0
+    },
+    {
+        "name": "DGS COMBLES NEGATIVE: GAS LEVEL PPM",
+        "updated": "2023-12-18T17:14:00",
+        "unit": null,
+        "digital": 0.0,
+        "rate": 1.0,
+        "value": 0.0
+    },
+    {
+        "name": "AKPC ROUBY: HEAT RECLAIM STATE",
+        "updated": "2023-12-18T17:14:00",
+        "unit": null,
+        "digital": null,
+        "rate": null,
+        "value": null
     }
 ]
