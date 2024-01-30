@@ -7,6 +7,7 @@
 
 from dotenv import load_dotenv
 from os import environ
+from datetime import datetime
 
 from influxdb_client import InfluxDBClient, Point, WriteOptions
 from influxdb_client.client.write_api import SYNCHRONOUS
@@ -23,14 +24,28 @@ bucket = environ["BUCKET"]
 client = InfluxDBClient(url = url, token = token, org = org)
 
 def write_single():
+    '''
+        Rappel : En principe un data point dans InfluxDB se constituerai de cette manière :
+        measurementName,equipmentId=<hash>,location=QUAI 2 EXPEDITION,unit=UnitType,measurementType=Type,isDigital=DigitalIndicator value=Value Timestamp
+        ex :
+        temperature,equipmentId=ff587999dc2fa5101,location=QUAI 2 EXPEDITION,unit=degC,isDigital=0 value=12.11 1671375600
+        D'où l'importance de l'utentifiant unique.
+    '''
     write_api = client.write_api(write_options = SYNCHRONOUS)
 
-    # Création d'un point unique.
-    point_one = (Point("my_measure_04").tag("name", "QUAI 2 EXPEDITION: U17 THER AIR").tag("unit", "degc").field("valeur", 12.11).field("rate", 1).time("2023-12-18T17:00:00Z"))
-    point_two = (Point("my_measure_04").tag("name", "QUAI 2 EXPEDITION: U17 THER AIR").tag("unit", "degc").field("valeur", 12.39).field("rate", 1).time("2023-12-18T17:00:01Z"))
-    
+    timestamps = ["2023-12-18T16:00:00Z", "2023-12-18T16:01:00Z"]
+    values = [12.11, 12.19]
+    points = []
+
+    test_now = datetime.now().today()
+    print(test_now)
+
+    for i in range(2):
+        # Création d'un point unique.
+        points.append(Point("TEMPERATURE_" + "03").tag("equipmentId", "ff587999dc2fa5101").tag("location", "QUAI 2 EXPEDITION").tag("unit", "degC").tag("isDigital", "0").tag("rate", "1").field("value", values[i]).time(timestamps[i]))
+        
     # Écriture vers l'api.
-    write_api.write(bucket = bucket, org = org, record = [point_one, point_two])
+    write_api.write(bucket = bucket, org = org, record = points)
 
 def query():
     query_api = client.query_api()
@@ -48,6 +63,6 @@ def query():
 if __name__ == "__main__":
     print("Test en cours vers InfluxDB encore quelques instants...")
     write_single()
-    
+
     # Ferme le client.
     client.close()
