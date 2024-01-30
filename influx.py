@@ -15,10 +15,10 @@ from influxdb_client.client.write_api import SYNCHRONOUS
 load_dotenv()
 
 # Données de configuration d'influx DB.
-url = 'http://localhost:8086'
+url = environ["HOST"]
 token = environ["TOKEN"]
-org = 'Haupt Tech'
-bucket = 'tiberian'
+org = environ["ORG"]
+bucket = environ["BUCKET"]
 
 def convert(test = True):
     '''
@@ -37,14 +37,17 @@ def convert(test = True):
 
     # Écriture des données.
     for record in data:
-        # Nom de l'enregistrement en gros basé sur le header du csv.
-        point = Point("ETSROUBY_02")
         
+        # Le nom de la mesure.
+        point = Point("TEST" + "04")
+
         for key, value in record.items():
-            # Si la clé est différente de updated on ajoute une paire clé valeur.
-            if key != 'updated': point = point.field(key, value)
-        
-        point = point.time(record['updated'])
+            # Si la clé parcourue est lieu ou device (nom de l'appareil) on s'en sert de tag afin de l'indéxer.
+            # Remarque, les valeurs ne sont pas indexées.
+            if key in ["location", "device"]: point.tag(key, value)
+            elif key != 'updated': point.field(key, value)
+
+        point.time(record['updated'])
         
         if not test: write_api.write(bucket = bucket, org = org, record = point)
         else: print(point)

@@ -8,12 +8,25 @@
     Tester avec le fichier csv au complet et observer les valeurs `missing`.
 '''
 
+import colorama
 import pandas as pd
+from zoneinfo import ZoneInfo
 from datetime import datetime
+from colorama import Fore
 import json
 import re
+import hashlib
+
+# Initialize colorama.
+colorama.init(autoreset = True)
 
 def convert(file_path: str):
+    # Affiche un petit message d'information.
+    print(Fore.YELLOW + "Conversion vers le format JSON en cours veuillez patienter...")
+
+    # La fusée horaire (le fuseau pardon).
+    paris_timezone = ZoneInfo("Europe/Paris")
+    
     # Charge le fichier csv et ignore les headers, on utilise le séparateur point virgule.
     csv_data = pd.read_csv(file_path, header = None, sep = ';')
     
@@ -37,7 +50,10 @@ def convert(file_path: str):
         row = csv_data.iloc[i, :].values
         
         # On sait que la première valeur est notre timestamp qu'on met au propre puis on formate.
-        timestamp = datetime.strptime(re.sub(' +', ' ', row[0]).strip(), "%H:%M:%S %d/%m/%Y").isoformat()
+        local_time_str = re.sub(' +', ' ', row[0]).strip()
+        local_datetime = datetime.strptime(local_time_str, "%H:%M:%S %d/%m/%Y")
+
+        local_datetime = local_datetime.replace(tzinfo = paris_timezone)
         
         # Les mesures après la première valeur.
         measurements = row[1:]
@@ -50,9 +66,12 @@ def convert(file_path: str):
 
             # /!\ Une conversion est nécessaire pour les valeurs numériques afin d'éviter l'erreur `unsupported input type for mean aggregate: string`.
             # En Python, None = Null.
+            # Le hash est sur le lieu et le nom de l'équipement, ce qui nous donne un identifiant unique dont on retrouve des valeurs chaque minutes.
             entry = {
-                "name": instrument,
-                "updated": timestamp,
+                "equipmentId": hashlib.sha256(instrument.encode()).hexdigest(),
+                "location": re.split(":", instrument)[0],
+                "device": re.split(":", instrument)[1][1:], # On enlève l'espace de trop en bougeant le curseur.
+                "updated": local_datetime.astimezone(ZoneInfo("UTC")).isoformat().replace('+00:00', 'Z'),
                 "unit": units[j] if not pd.isna(units[j]) else None,
                 "digital": float(digital_analog[j]) if not pd.isna(digital_analog[j]) else None,
                 "rate": float(str(sample_rates[j]).split(' ')[0]) if not pd.isna(sample_rates[j]) else None,
@@ -71,10 +90,11 @@ def save(json_data, output_file_path):
 if __name__ == "__main__":
     # Considère la variable comme le chemin passé en argument pour ce script.
     path = "example.csv"
-    print("Conversion vers le format JSON en cours veuillez patienter...")
     
     # Procède à la conversion.
     data = convert(path)
 
     # Sauvegarde le fichier sur le disque.
     save(data, "output.json")
+
+    print(Fore.GREEN + "Conversion terminée.")
