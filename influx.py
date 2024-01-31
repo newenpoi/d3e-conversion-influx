@@ -35,24 +35,39 @@ def convert(test = True):
     # Charger les données json.
     with open('output.json', 'r') as file: data = json.load(file)
 
-    # Écriture des données.
+    # Pour chaque enregistrement.
     for record in data:
+        # Ces données sont fixes et ne changent pas pour un équipement.
+        equipment_id = record["equipmentId"]
+        location = record["location"]
+        device = record["device"]
+        unit = record["unit"]
+        digital = record["digital"]
+        rate = record["rate"]
         
-        # Le nom de la mesure.
-        point = Point("TEST" + "04")
+        # Pour chaque mesure d'un équipement.
+        for measurement in record["measurements"]:
+            # Création d'un point pour chaque mesure.
+            point = Point("mesure")
+            
+            # Les tags (toujours des chaines, seront indexées).
+            point.tag("equipmentId", equipment_id)
+            point.tag("location", location)
+            point.tag("device", device)
+            
+            # Les champs (peuvent être différents types de données).
+            point.field("value", measurement["value"])
+            point.field("unit", unit)
+            point.field("digital", digital)
+            point.field("rate", rate)
+            
+            # Le point dans le temps.
+            point.time(measurement["time"])
+            
+            if not test: write_api.write(bucket = bucket, org = org, record = point)
+            else: print(point.to_line_protocol())
 
-        for key, value in record.items():
-            # Si la clé parcourue est lieu ou device (nom de l'appareil) on s'en sert de tag afin de l'indéxer.
-            # Remarque, les valeurs ne sont pas indexées.
-            if key in ["location", "device"]: point.tag(key, value)
-            elif key != 'updated': point.field(key, value)
-
-        point.time(record['updated'])
-        
-        if not test: write_api.write(bucket = bucket, org = org, record = point)
-        else: print(point)
-
-    # Close the client
+    # Fermeture du client.
     client.close()
 
 # Amorce.
