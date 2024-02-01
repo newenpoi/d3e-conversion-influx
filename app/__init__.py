@@ -2,6 +2,7 @@
 import os
 from flask import Flask
 from config import DevelopmentConfig, ProductionConfig
+from app.dao import initialize
 
 def create_app():
     app = Flask(__name__)
@@ -18,5 +19,9 @@ def create_app():
     app.register_blueprint(history_bp)
     app.register_blueprint(reimport_bp)
     app.register_blueprint(devices_bp)
+
+    # Déclenché avant toute requête.
+    @app.before_first_request
+    def initialize_database(): initialize()
     
     return app

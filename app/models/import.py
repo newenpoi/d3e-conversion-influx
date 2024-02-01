@@ -2,8 +2,19 @@
 from pymongo import MongoClient
 
 class ImportRecord:
-    def __init__(self, db):
-        self.collection = db.imports
+    def __init__(self, csvFileName, uploadDateTime, processedDateTime = None):
+        self.csvFileName = csvFileName
+        self.uploadDateTime = uploadDateTime
+        self.processedDateTime = processedDateTime
 
-    def insert_import_record(self, import_data):
-        return self.collection.insert_one(import_data).inserted_id
+    # Method to save instance to MongoDB
+    def save(self, db):
+        db.imports.insert_one(self.to_dict())
+
+    # Convert instance to dictionary suitable for MongoDB
+    def to_dict(self):
+        return {
+            "csvFileName": self.csvFileName,
+            "uploadDateTime": self.uploadDateTime,
+            "processedDateTime": self.processedDateTime
+        }
