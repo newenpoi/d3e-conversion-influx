@@ -69,8 +69,3 @@ def convert(test = True):
 
     # Fermeture du client.
     client.close()
-
-# Amorce.
-if __name__ == "__main__":
-    print("Importation en cours vers InfluxDB encore quelques instants...")
-    convert(test = False)
