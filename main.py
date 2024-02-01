@@ -87,8 +87,10 @@ def convert(file_path: str):
 
             data[id]["measurements"].append(measurement_entry)
 
-    # Convertir le dictionnaire en liste pour le format de sortie souhaité
+    # Transforme les valeurs sous forme de liste.
     output = list(data.values())
+    
+    # Sérialisation vers un objet json formatté.
     return json.dumps(output, indent = 4)
 
 def save(json_data, output_file_path):
