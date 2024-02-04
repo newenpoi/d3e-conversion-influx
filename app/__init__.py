@@ -2,7 +2,8 @@
 import os
 from flask import Flask
 from config import DevelopmentConfig, ProductionConfig
-from app.dao import initialize
+from .dao import db
+from .dao import indexation
 
 def create_app():
     app = Flask(__name__)
@@ -22,6 +23,6 @@ def create_app():
 
     # Déclenché avant toute requête.
     @app.before_first_request
-    def initialize_database(): initialize()
+    def initialize_database(): indexation(db)
     
     return app

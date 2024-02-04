@@ -9,19 +9,10 @@ DB_NAME = os.getenv('MONGODB_DB_NAME', 'influx')
 client = MongoClient(MONGODB_URI)
 db = client[DB_NAME]
 
-def initialize():
-    # Liste des collections requises.
-    required_collections = ['imports', 'devices']
+def indexation(db):
+    # Pour des requêtes très performantes on utilise l'indexation.
+    db.devices.create_index([('equipmentId', 1)], unique = True)
+    db.devices.create_index([('date', 1)])
 
-    # Liste des collections existantes.
-    existing_collections = db.list_collection_names()
-    
-    # Pour chaque collection on vérifie qu'elle existe sinon on tente de la créer.
-    for collection in required_collections:
-        if collection not in existing_collections:
-            try:
-                db.create_collection(collection)
-                print(f"La collection {collection} a été créée avec succès.")
-            except:
-                # This block might actually never be reached due to the check against existing_collections
-                print(f"La collection {collection} existe déjà.")
+    # On peut rajouter davantage d'indexations ci-dessous.
+    # ...
