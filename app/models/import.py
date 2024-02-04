@@ -1,5 +1,8 @@
 # app/models/import.py
-from pymongo import MongoClient
+
+'''
+    Avec MongoDB les schémas sont inutiles, néanmoins on anticipe pour plus tard et ça permet de se mettre d'accord sur la structure.
+'''
 
 class ImportRecord:
     def __init__(self, csvFileName, uploadDateTime, processedDateTime = None):

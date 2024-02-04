@@ -1,5 +1,9 @@
 # app/models/device.py
 
+'''
+    Avec MongoDB les schémas sont inutiles, néanmoins on anticipe pour plus tard et ça permet de se mettre d'accord sur la structure.
+'''
+
 class Device:
     def __init__(self, equipmentId, location, device, date, measurements, unit, digital, rate):
         self.equipmentId = equipmentId

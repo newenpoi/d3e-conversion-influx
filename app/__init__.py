@@ -8,6 +8,7 @@ from .dao import indexation
 def create_app():
     app = Flask(__name__)
 
+    # Récupère la configuration de développement ou de production selon l'environnement (FLASK_ENV) spécifié.
     if os.getenv('FLASK_ENV') == 'production': app.config.from_object(ProductionConfig)
     else: app.config.from_object(DevelopmentConfig)
     
@@ -22,7 +23,6 @@ def create_app():
     app.register_blueprint(devices_bp)
 
     # Déclenché avant toute requête.
-    @app.before_first_request
-    def initialize_database(): indexation(db)
+    indexation(db)
     
     return app

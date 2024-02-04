@@ -28,7 +28,7 @@ def start_watching(path, on_created_callback, seconds = 20):
     observer.start()
     
     try:
-        # Boucle infinie contrôlée.
+        # Boucle infinie (contrôlée).
         while True: time.sleep(seconds)
     # Interrompt le processus après une interruption utilisateur (exemple CTRL C avec linux).
     except KeyboardInterrupt:
