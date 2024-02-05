@@ -1,3 +1,7 @@
+'''
+    Pour AKSM Février 2024
+'''
+
 import colorama
 import pandas as pd
 from zoneinfo import ZoneInfo
@@ -19,7 +23,7 @@ def convert(file_path: str, save = False):
     paris_timezone = ZoneInfo("Europe/Paris")
     
     # Charge le fichier csv et ignore les headers, on utilise le séparateur point virgule.
-    csv_data = pd.read_csv(file_path, header = None, sep = ';')
+    csv_data = pd.read_csv(file_path, skiprows = 1, na_values = [''], sep = ',')
     
     # Le nom des instruments.
     instruments = csv_data.iloc[1, 1:].values
