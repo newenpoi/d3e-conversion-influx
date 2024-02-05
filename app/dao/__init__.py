@@ -7,7 +7,7 @@ MONGODB_URI = os.getenv('MONGODB_URI')
 DB_NAME = os.getenv('MONGODB_DB_NAME')
 
 client = MongoClient(MONGODB_URI)
-db = client[DB_NAME]
+db = 'influx'
 
 def indexation(db):
     # Pour des requêtes très performantes on utilise l'indexation.

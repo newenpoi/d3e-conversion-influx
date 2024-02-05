@@ -2,8 +2,6 @@
 import os
 from flask import Flask
 from config import DevelopmentConfig, ProductionConfig
-from .dao import db
-from .dao import indexation
 
 def create_app():
     app = Flask(__name__)
@@ -23,6 +21,6 @@ def create_app():
     app.register_blueprint(devices_bp)
 
     # Déclenché avant toute requête.
-    indexation(db)
+    # indexation(db)
     
     return app

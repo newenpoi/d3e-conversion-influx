@@ -1,9 +1,11 @@
 # main.py
+import os
 import colorama
 from threading import Thread
 from colorama import Fore
 from app import create_app
 from app.utils.file_watcher import start_watching
+from app.utils.csv_to_json import convert
 
 # Initialize colorama (=~ méthode statique).
 colorama.init(autoreset = True)
@@ -11,6 +13,11 @@ colorama.init(autoreset = True)
 # La fonction (callback) déclenchée par le watch dog (reste à compléter la logique).
 def on_new_file_created(file_path):
     print(Fore.YELLOW + f"Un nouveau csv vient de pop dans le dossier à l'adresse : {file_path}.")
+
+    # Appelle la procédure afin de convertir le csv en json.
+    convert(file_path, save = True)
+
+    print(Fore.LIGHTGREEN_EX + "La conversion du document csv est terminée.")
 
 if __name__ == '__main__':
     # Création de l'application web.

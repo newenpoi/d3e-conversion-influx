@@ -3,6 +3,7 @@ import pandas as pd
 from zoneinfo import ZoneInfo
 from datetime import datetime
 from colorama import Fore
+import os
 import json
 import re
 import hashlib
@@ -10,7 +11,7 @@ import hashlib
 # Initialize colorama.
 colorama.init(autoreset = True)
 
-def convert(file_path: str):
+def convert(file_path: str, save = False):
     # Affiche un petit message d'information.
     print(Fore.YELLOW + "Conversion vers le format JSON en cours veuillez patienter...")
     
@@ -81,10 +82,13 @@ def convert(file_path: str):
 
     # Transforme les valeurs sous forme de liste.
     output = list(data.values())
+
+    # Sauve le json sur le disque si nécessaire (on sépare le fichier de son chemin et on extrait uniquement le nom avec [0]).
+    if (save == True): save_json(json.dumps(output, indent = 4), f"app/temp/{os.path.splitext(os.path.basename(file_path))[0]}")
     
     # Sérialisation vers un objet json formatté.
     return json.dumps(output, indent = 4)
 
-def save(json_data, output_file_path):
-    with open(output_file_path, 'w') as file:
+def save_json(json_data, output_file_path):
+    with open(f"{output_file_path}.json", 'w') as file:
         file.write(json_data)
