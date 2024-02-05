@@ -1,7 +1,7 @@
 # app/routes/devices.py
 from flask import Blueprint, jsonify
 
-devices_bp = Blueprint('devices', __name__, url_prefix = '/devices')
+devices_bp = Blueprint('devices', __name__, url_prefix = '/last-import')
 
 @devices_bp.route('/', methods = ['GET'])
 def get_devices(company: None):

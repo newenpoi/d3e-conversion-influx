@@ -18,7 +18,7 @@ class DevelopmentConfig(Config):
 
 class ProductionConfig(Config):
     DEBUG = False
-    WATCHDOG_SLEEP_INTERVAL = os.getenv('WATCHDOG_SLEEP_INTERVAL', 60)
+    WATCHDOG_SLEEP_INTERVAL = os.getenv('WATCHDOG_SLEEP_INTERVAL')
 
     # TODO: Déterminer le dossier partagé contenant les csv.
-    CSV_FOLDER_PATH = os.getenv('CSV_FOLDER_PATH', '')
+    CSV_FOLDER_PATH = os.getenv('CSV_FOLDER_PATH')
