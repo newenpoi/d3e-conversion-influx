@@ -13,14 +13,9 @@ def create_app():
     # Importation des routes.
     from .routes.history import history_bp
     from .routes.force_reimport import reimport_bp
-    from .routes.devices import devices_bp
     
     # Enregistre les routes spécifiques au serveur.
     app.register_blueprint(history_bp)
     app.register_blueprint(reimport_bp)
-    app.register_blueprint(devices_bp)
-
-    # Déclenché avant toute requête.
-    # indexation(db)
     
     return app

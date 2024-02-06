@@ -20,7 +20,7 @@ token = environ["TOKEN"]
 org = environ["ORG"]
 bucket = environ["BUCKET"]
 
-def convert(test = True):
+def convert(file_name: str, test = True):
     '''
         On doit convertir les données json en line protocol pour les rendre compatibles avec influx db.
         InfluxDB s'occupe de cette conversion à partir du moment où on lui fourni les points avec l'objet Point (suivi de field value).
@@ -33,7 +33,7 @@ def convert(test = True):
     write_api = client.write_api(write_options = SYNCHRONOUS)
     
     # Charger les données json.
-    with open('output.json', 'r') as file: data = json.load(file)
+    with open(file_name, 'r') as file: data = json.load(file)
 
     # Pour chaque enregistrement.
     for record in data:
