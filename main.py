@@ -1,9 +1,10 @@
 # main.py
-import os
 import colorama
 from threading import Thread
-from colorama import Fore
+from colorama import Fore # Haut en couleurs.
+
 from app import create_app
+from app.services import device_service as ds
 from app.utils.file_watcher import start_watching
 from app.utils.csv_to_json import convert
 
@@ -15,9 +16,12 @@ def on_new_file_created(file_path):
     print(Fore.YELLOW + f"Un nouveau csv vient de pop dans le dossier à l'adresse : {file_path}.")
 
     # Appelle la procédure afin de convertir le csv en json.
-    convert(file_path, save = True)
+    data = convert(file_path, save = True)
 
-    print(Fore.LIGHTGREEN_EX + "La conversion du document csv est terminée.")
+    # Envoi les appareils vers MySQL.
+    ds.ajouter_appareils(data)
+
+    print(Fore.LIGHTGREEN_EX + "Les données ont été envoyé vers MySQL.")
 
 if __name__ == '__main__':
     # Création de l'application web.

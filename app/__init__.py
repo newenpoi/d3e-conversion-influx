@@ -1,6 +1,7 @@
 # app/__init__.py
 import os
 from flask import Flask
+from app.models import setup
 from config import DevelopmentConfig, ProductionConfig
 
 def create_app():
@@ -9,6 +10,9 @@ def create_app():
     # Récupère la configuration de développement ou de production selon l'environnement (FLASK_ENV) spécifié.
     if os.getenv('FLASK_ENV') == 'production': app.config.from_object(ProductionConfig)
     else: app.config.from_object(DevelopmentConfig)
+
+    # Création des schéma sql.
+    setup()
     
     # Importation des routes.
     from .routes.history import history_bp

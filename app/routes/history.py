@@ -1,6 +1,6 @@
 # app/routes/history.py
 from flask import Blueprint, jsonify
-from app.services.imports_service import recuperer_historique_fichiers
+from app.services.historique_service import recuperer_historique_fichiers
 
 '''
     Ce fichier représente une route serveur.

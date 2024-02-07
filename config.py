@@ -1,24 +1,39 @@
 # config.py
-import os
+from os import environ
+from dotenv import load_dotenv
+
+'''
+    TODO : Mettre à jour ce fichier de configuration, utiliser exclusivement celui ci qui charge les variables env en fonction de l'environnement.
+'''
+
+# Données des variables d'environnement contenues dans le fichier .env qui est ignoré par notre git.
+load_dotenv()
 
 class Config:
-    DEBUG = False
-    WATCHDOG_SLEEP_INTERVAL = 20
-    CSV_FOLDER_PATH = 'app/storage'
-
-    # Oui bah si t'es veux écrire des tests t'es les écrira tout seul eu'n fois.
-    TESTING = False
+    WATCHDOG_SLEEP_INTERVAL = environ['WATCHDOG_SLEEP_INTERVAL']
 
 class DevelopmentConfig(Config):
     DEBUG = True
-    WATCHDOG_SLEEP_INTERVAL = 10
     
     # Si dans le fichier d'environnement (.env) la variable `CSV_FOLDER_PATH` n'existe pas alors on prend `app/storage` par défaut.
     CSV_FOLDER_PATH = 'app/storage'
 
+    MYSQL_HOST = "localhost"
+    MYSQL_PORT = 3306
+    MYSQL_USERNAME = "root"
+    MYSQL_PASSWORD = ".Logme1nn"
+    MYSQL_DATABASE = "aksm"
+    MYSQL_AUTOCOMMIT = True
+
 class ProductionConfig(Config):
     DEBUG = False
-    WATCHDOG_SLEEP_INTERVAL = os.getenv('WATCHDOG_SLEEP_INTERVAL')
 
     # TODO: Déterminer le dossier partagé contenant les csv.
-    CSV_FOLDER_PATH = os.getenv('CSV_FOLDER_PATH')
+    CSV_FOLDER_PATH = environ['CSV_FOLDER_PATH']
+
+    MYSQL_HOST = ""
+    MYSQL_PORT = 0000
+    MYSQL_USERNAME = ""
+    MYSQL_PASSWORD = ""
+    MYSQL_DATABASE = ""
+    MYSQL_AUTOCOMMIT = True

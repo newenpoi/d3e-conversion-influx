@@ -43,8 +43,6 @@ def convert(file_path: str, save = False):
         
         # Toutes les valeurs à partir de la quatrième ligne (y compris le datetime à l'indice zéro).
         row = csv_data.iloc[i, :].values
-
-        # /!\ Pour une raison qu'on ignore, on a pas le datetime dans notre row.
         
         # On sait que la première valeur est notre timestamp qu'on met au propre en le formattant et le transformant en ts conscient de son fuseau.
         local_time_str = re.sub(' +', ' ', row[0]).strip()
@@ -61,7 +59,7 @@ def convert(file_path: str, save = False):
             id = hashlib.sha256(instrument.encode()).hexdigest()
 
             # En fonction du nouvel identifiant spécifié entre les hash tag (#).
-            match = re.findall("#(.*?)#", instrument.encode())[0]
+            match = re.findall("#(.*?)#", instrument)
 
             # On sépare le lieu et l'appareil en enlevant également l'espace de trop du nom (device) en bougeant le curseur.
             location, device = re.split(":", instrument)[0], re.split(":", instrument)[1][1:]
@@ -99,11 +97,16 @@ def convert(file_path: str, save = False):
     output = list(data.values())
 
     # Sauve le json sur le disque si nécessaire (on sépare le fichier de son chemin et on extrait uniquement le nom avec [0]).
-    if (save == True): save_json(json.dumps(output, indent = 4), f"app/temp/{os.path.splitext(os.path.basename(file_path))[0]}")
+    if (save == True): save_json(json.dumps(output, indent = 4), "app/temp", os.path.splitext(os.path.basename(file_path))[0])
     
     # Sérialisation vers un objet json formatté.
-    return json.dumps(output, indent = 4)
+    return output
 
-def save_json(json_data, output_file_path):
-    with open(f"{output_file_path}.json", 'w') as file:
+def save_json(json_data, folder, file):
+    # On s'assure que le répertoire existe (os.path.join permet une compatibilité cross-platform).
+    directory = os.path.join(folder)
+    os.makedirs(directory, exist_ok = True)
+    
+    # On sauvegarde le fichier.
+    with open(os.path.join(folder, f"{file}.json"), 'w') as file:
         file.write(json_data)

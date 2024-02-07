@@ -29,7 +29,7 @@ def start_watching(path, on_created_callback, seconds = 20):
     
     try:
         # Boucle infinie (contrôlée).
-        while True: time.sleep(seconds)
+        while True: time.sleep(int(seconds))
     # Interrompt le processus après une interruption utilisateur (exemple CTRL C avec linux).
     except KeyboardInterrupt:
         observer.stop()
