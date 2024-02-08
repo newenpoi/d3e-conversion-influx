@@ -3,3 +3,4 @@ pandas
 influxdb
 watchdog
 flask
+flask-cors

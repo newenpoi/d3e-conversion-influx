@@ -11,6 +11,10 @@ from app.utils.csv_to_json import convert
 # Initialize colorama (=~ méthode statique).
 colorama.init(autoreset = True)
 
+# TODO : Pouvoir vérifier si la connexion avec InfluxDB est opérationnel et avec l'AKSM (ping adresses).
+# TODO : Envoyer alerte (mail).
+# TODO : A la toute fin : Personnaliser les variables d'environnement.
+
 # La fonction (callback) déclenchée par le watch dog (reste à compléter la logique).
 def on_new_file_created(file_path):
     print(Fore.YELLOW + f"Un nouveau csv vient de pop dans le dossier à l'adresse : {file_path}.")

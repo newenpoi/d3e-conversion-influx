@@ -84,6 +84,8 @@ def convert(file_path: str, save = False):
             # Detecte les valeurs manquantes (et incrémente le compteur si nécessaire).
             manquante = pd.isna(measurements[j]) or str(measurements[j]).upper() == 'MISSING'
             if manquante: data[id]["missingno"] += 1
+
+            # TODO : Nombre de perte par capteur et par import.
             
             # Nouvelle entrée (les valeurs sont remplacées par None si elles n'existent pas dans le csv).
             measurement_entry = {
