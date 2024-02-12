@@ -1,5 +1,5 @@
 # config.py
-from os import environ
+import os
 from dotenv import load_dotenv
 
 '''
@@ -10,7 +10,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 class Config:
-    WATCHDOG_SLEEP_INTERVAL = environ['WATCHDOG_SLEEP_INTERVAL']
+    WATCHDOG_SLEEP_INTERVAL = os.getenv('WATCHDOG_SLEEP_INTERVAL')
 
 class DevelopmentConfig(Config):
     DEBUG = True
@@ -29,7 +29,7 @@ class ProductionConfig(Config):
     DEBUG = False
 
     # TODO: Déterminer le dossier partagé contenant les csv.
-    CSV_FOLDER_PATH = environ['CSV_FOLDER_PATH']
+    CSV_FOLDER_PATH = os.getenv('CSV_FOLDER_PATH')
 
     MYSQL_HOST = ""
     MYSQL_PORT = 0000

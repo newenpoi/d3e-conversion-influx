@@ -18,7 +18,7 @@ def setup():
         print(Fore.YELLOW + "Création de la base de données pour AKSM.")
         
         # Créé la base de données (on pourrait avoir un fichier avec une liste de db à créer).
-        db.create_database(os.getenv('MYSQL_DB'))
+        db.create_database(os.getenv('MYSQL_DATABASE'))
 
         # On se positionne sur la base.
         db.execute(f"USE {os.getenv('MYSQL_DATABASE')}")
