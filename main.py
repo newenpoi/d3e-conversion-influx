@@ -7,6 +7,7 @@ from app import create_app
 from app.services import device_service as ds
 from app.utils.file_watcher import start_watching
 from app.utils.csv_to_json import convert
+from app.utils.influx import transmute
 
 # Initialize colorama (=~ méthode statique).
 colorama.init(autoreset = True)
@@ -20,12 +21,17 @@ def on_new_file_created(file_path):
     print(Fore.YELLOW + f"Un nouveau csv vient de pop dans le dossier à l'adresse : {file_path}.")
 
     # Appelle la procédure afin de convertir le csv en json.
-    data = convert(file_path, save = True)
+    data = convert(file_path)
 
     # Envoi les appareils vers MySQL.
-    ds.ajouter_appareils(data)
+    # ds.ajouter_appareils(data)
 
     print(Fore.LIGHTGREEN_EX + "Les données ont été envoyé vers MySQL.")
+
+    # Passe les données du json vers influxdb dans le bucket spécifié en variable d'environnement.
+    transmute(data, test = True)
+
+    print(Fore.LIGHTGREEN_EX + "Les données ont été transféré vers InfluxDB.")
 
 if __name__ == '__main__':
     # Création de l'application web.

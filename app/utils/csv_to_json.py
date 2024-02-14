@@ -11,6 +11,7 @@ import os
 import json
 import re
 import hashlib
+import time
 
 # Initialize colorama.
 colorama.init(autoreset = True)
@@ -18,10 +19,14 @@ colorama.init(autoreset = True)
 def convert(file_path: str, save = False):
     # Affiche un petit message d'information.
     print(Fore.YELLOW + "Conversion vers le format JSON en cours veuillez patienter...")
+
+    # Timer start.
+    start_time = time.time()
     
     # La fusée horaire (le fuseau pardon).
     paris_timezone = ZoneInfo("Europe/Paris")
     
+    # TODO : Traiter le cas où le fichier est inaccessible.
     # Charge le fichier csv et ignore les headers, on utilise le séparateur point virgule.
     csv_data = pd.read_csv(file_path, na_values = [''], skiprows = [0], header = None, sep = ',')
     
@@ -61,8 +66,10 @@ def convert(file_path: str, save = False):
             # En fonction du nouvel identifiant spécifié entre les hash tag (#).
             match = re.findall("#(.*?)#", instrument)
 
-            # On sépare le lieu et l'appareil en enlevant également l'espace de trop du nom (device) en bougeant le curseur.
-            location, device = re.split(":", instrument)[0], re.split(":", instrument)[1][1:]
+            # On vérifie la présence du séparateur avant d'accéder à un indice.
+            # Puis on sépare le lieu et l'appareil en enlevant également l'espace de trop du nom (device) en bougeant le curseur ([1:]).
+            if ":" in instrument: location, device = re.split(":", instrument)[0], re.split(":", instrument)[1][1:]
+            else: location, device = None, instrument
             
             # Servira pour notre champ date « parent » désormais séparé des heures.
             date_str = local_datetime.strftime("%Y-%m-%d")
@@ -82,7 +89,7 @@ def convert(file_path: str, save = False):
                 }
 
             # Detecte les valeurs manquantes (et incrémente le compteur si nécessaire).
-            manquante = pd.isna(measurements[j]) or str(measurements[j]).upper() == 'MISSING'
+            manquante = pd.isna(measurements[j]) or type(measurements[j]) == str
             if manquante: data[id]["missingno"] += 1
 
             # TODO : Nombre de perte par capteur et par import.
@@ -100,6 +107,9 @@ def convert(file_path: str, save = False):
 
     # Sauve le json sur le disque si nécessaire (on sépare le fichier de son chemin et on extrait uniquement le nom avec [0]).
     if (save == True): save_json(json.dumps(output, indent = 4), "app/temp", os.path.splitext(os.path.basename(file_path))[0])
+
+    end_time = time.time()
+    print(Fore.LIGHTMAGENTA_EX + f"Temps de création du dictionnaire d'environ {round(end_time - start_time, 2)} secondes.")
     
     # Sérialisation vers un objet json formatté.
     return output

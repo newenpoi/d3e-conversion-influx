@@ -18,7 +18,7 @@ def create_app():
     
     # Importation des routes.
     from .routes.history import history_bp
-    from .routes.force_reimport import reimport_bp
+    from .routes.reimport import reimport_bp
     from .routes.devices import devices_bp
     
     # Enregistre les routes spécifiques au serveur.

@@ -18,7 +18,7 @@ def ajouter_appareils(appareils: list):
     '''
         Ajouter une succession d'appareils, généralement lors de la récupération des données d'un fichier csv converti en json.
         TODO : Adapter avec le nouveau fichier.
-        TODO : Éviter qu'il y ai des doublons.
+        TODO : Éviter qu'il y ai des doublons (OK).
     '''
     with Database() as db:
         for appareil in appareils:

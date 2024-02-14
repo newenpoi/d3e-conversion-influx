@@ -4,9 +4,11 @@
 '''
 
 import json
+import time
 
 from dotenv import load_dotenv
 from os import environ
+from colorama import Fore
 
 from influxdb_client import InfluxDBClient, Point, WriteOptions
 from influxdb_client.client.write_api import SYNCHRONOUS
@@ -20,7 +22,7 @@ token = environ["TOKEN"]
 org = environ["ORG"]
 bucket = environ["BUCKET"]
 
-def convert(file_name: str, test = True):
+def transmute(data: dict, test = False):
     '''
         On doit convertir les données json en line protocol pour les rendre compatibles avec influx db.
         InfluxDB s'occupe de cette conversion à partir du moment où on lui fourni les points avec l'objet Point (suivi de field value).
@@ -31,9 +33,13 @@ def convert(file_name: str, test = True):
     # Initialisation du client InfluxDB.
     client = InfluxDBClient(url = url, token = token, org = org)
     write_api = client.write_api(write_options = SYNCHRONOUS)
+    counter = 0
     
     # Charger les données json.
-    with open(file_name, 'r') as file: data = json.load(file)
+    # with open(file_name, 'r') as file: data = json.load(file)
+
+    # Timer start.
+    start_time = time.time()
 
     # Pour chaque enregistrement.
     for record in data:
@@ -65,7 +71,11 @@ def convert(file_name: str, test = True):
             point.time(measurement["time"])
             
             if not test: write_api.write(bucket = bucket, org = org, record = point)
-            else: print(point.to_line_protocol())
+            else: counter = counter + 1
+    
+    end_time = time.time()
+    print(Fore.GREEN + f"{counter} nouveaux points ont été ajoutés au bucket.")
+    print(Fore.LIGHTMAGENTA_EX + f"Temps de traitement du dictionnaire vers influx environ {round(end_time - start_time, 2)} secondes.")
 
     # Fermeture du client.
     client.close()

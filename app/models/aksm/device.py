@@ -24,6 +24,7 @@ class Device():
         `comment` varchar(511) DEFAULT NULL COMMENT "Commentaire sur l'équipement.",
         `created` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT "Date à laquelle cet équipement a été enregistré.",
 
+        UNIQUE KEY `Hash` (`hash`),
         PRIMARY KEY (`id`)
         ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4;
     '''

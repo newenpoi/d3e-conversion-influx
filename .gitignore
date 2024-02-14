@@ -3,3 +3,4 @@ output.json
 __pycache__
 temp
 storage
+*.csv
