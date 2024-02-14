@@ -5,9 +5,11 @@
 
 import json
 import time
+import os
+
+import pandas as pd
 
 from dotenv import load_dotenv
-from os import environ
 from colorama import Fore
 
 from influxdb_client import InfluxDBClient, Point, WriteOptions
@@ -17,10 +19,10 @@ from influxdb_client.client.write_api import SYNCHRONOUS
 load_dotenv()
 
 # Données de configuration d'influx DB.
-url = environ["HOST"]
-token = environ["TOKEN"]
-org = environ["ORG"]
-bucket = environ["BUCKET"]
+url = os.getenv("HOST")
+token = os.getenv("TOKEN")
+org = os.getenv("ORG")
+bucket = os.getenv("BUCKET")
 
 def transmute(data: dict, test = False):
     '''
@@ -30,10 +32,11 @@ def transmute(data: dict, test = False):
         https://www.influxdata.com/blog/import-json-data-influxdb-using-python-go-javascript-client-libraries/
     '''
 
+    print(Fore.LIGHTYELLOW_EX + "Importation vers InfluxDB en cours...")
+
     # Initialisation du client InfluxDB.
     client = InfluxDBClient(url = url, token = token, org = org)
-    write_api = client.write_api(write_options = SYNCHRONOUS)
-    counter = 0
+    write_api = client.write_api(write_options = SYNCHRONOUS, batch_size = 1000)
     
     # Charger les données json.
     # with open(file_name, 'r') as file: data = json.load(file)
@@ -43,6 +46,9 @@ def transmute(data: dict, test = False):
 
     # Pour chaque enregistrement.
     for record in data:
+        # Compteur de points.
+        counter = 0
+        
         # Ces données sont fixes et ne changent pas pour un équipement.
         equipment_id = record["equipmentId"]
         location = record["location"]
@@ -63,15 +69,21 @@ def transmute(data: dict, test = False):
             
             # Les champs (peuvent être différents types de données).
             point.field("value", measurement["value"])
-            point.field("unit", unit)
-            point.field("digital", digital)
-            point.field("rate", rate)
+            # point.field("unit", unit)
+            # point.field("digital", digital)
+            # point.field("rate", rate)
             
             # Le point dans le temps.
             point.time(measurement["time"])
             
             if not test: write_api.write(bucket = bucket, org = org, record = point)
-            else: counter = counter + 1
+            counter = counter + 1
+
+        # Pour déboggage.
+        # datetime_obj = pd.to_datetime(measurement["time"])
+        # formatted_datetime = datetime_obj.strftime("%d/%m/%Y %H:%M:%S")
+
+        print(Fore.LIGHTGREEN_EX + f"Ajout de {counter} mesures pour l'équipement {device}.")
     
     end_time = time.time()
     print(Fore.GREEN + f"{counter} nouveaux points ont été ajoutés au bucket.")

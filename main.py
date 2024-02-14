@@ -24,12 +24,12 @@ def on_new_file_created(file_path):
     data = convert(file_path)
 
     # Envoi les appareils vers MySQL.
-    # ds.ajouter_appareils(data)
+    ds.ajouter_appareils(data)
 
     print(Fore.LIGHTGREEN_EX + "Les données ont été envoyé vers MySQL.")
 
     # Passe les données du json vers influxdb dans le bucket spécifié en variable d'environnement.
-    transmute(data, test = True)
+    transmute(data)
 
     print(Fore.LIGHTGREEN_EX + "Les données ont été transféré vers InfluxDB.")
 

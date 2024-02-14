@@ -26,6 +26,7 @@ def ajouter_appareils(appareils: list):
             query = '''
                 INSERT INTO devices (hash, name, location, unit, digital, rate, created)
                 VALUES (%s, %s, %s, %s, %s, %s, now())
+                ON DUPLICATE KEY UPDATE unit = VALUES(unit), digital = VALUES(digital), rate = VALUES(rate)
             '''
 
             # Exécute la requête.

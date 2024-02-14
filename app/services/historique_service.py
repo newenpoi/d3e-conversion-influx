@@ -13,3 +13,16 @@ def recuperer_historique_fichiers():
 
     # Renvoyer le dictionnaire.
     return historique
+
+def ajouter_trace(name, start = None, end = None, missing = 0, comment = None):
+    '''
+        Ajoute une trace de cet import en base de données.
+    '''
+    with Database() as db:
+        query = '''
+            INSERT INTO history (date_imported, file_name, reading_start, reading_end, nb_missing, status, comment)
+            VALUES (now(), %s, %s, %s, %s, 1, %s)
+        '''
+
+        # Exécute la requête.
+        db.execute(query, (name, start, end, missing, comment))
