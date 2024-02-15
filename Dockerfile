@@ -13,4 +13,4 @@ COPY . .
 EXPOSE 5000
 
 # Start the application
-CMD ["python", "main.py"]
+CMD ["flask", "run", "--host", "0.0.0.0"]

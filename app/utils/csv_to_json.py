@@ -89,8 +89,14 @@ def convert(file_path: str, save = False):
                 }
 
             # Detecte les valeurs manquantes (et incrémente le compteur si nécessaire).
-            manquante = pd.isna(measurements[j]) or type(measurements[j]) == str
-            if manquante: data[id]["missingno"] += 1
+            # manquante = pd.isna(measurements[j]) or type(measurements[j]) == str
+            # if manquante: data[id]["missingno"] += 1
+            # Permet de spécifier que la valeur est manquante ou non.
+            manquante = False
+
+            # Attention il faut tenter de cast, si le cast echoue on considère la valeur manquante.
+            try: float(measurements[j])
+            except: data[id]["missingno"] += 1; manquante = True
 
             # TODO : Nombre de perte par capteur et par import.
             

@@ -9,7 +9,7 @@ class History():
     print(Fore.LIGHTCYAN_EX +  f'Trouvé le modèle suivant : AKSM/{__name__}.')
     
     model = '''
-        CREATE TABLE IF NOT EXISTS `History` (
+        CREATE TABLE IF NOT EXISTS `history` (
         `id` int UNSIGNED NOT NULL AUTO_INCREMENT,
         `date_imported` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT "Date d'importation.",
         `file_name` varchar(255) NOT NULL COMMENT "Nom du fichier importé.",

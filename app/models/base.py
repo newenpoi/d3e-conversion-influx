@@ -51,7 +51,7 @@ class Database:
 
     def execute(self, sql, params = None):
         try: self.cursor.execute(sql, params or ())
-        except mysql.connector.errors.IntegrityError as e: print("Déclenchement d'une contrainte d'intégrité :" + e); pass
+        except mysql.connector.errors.IntegrityError as e: pass
 
     def fetchone(self):
         return self.cursor.fetchone() 

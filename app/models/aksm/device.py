@@ -10,7 +10,7 @@ class Device():
     print(Fore.LIGHTCYAN_EX + f'Trouvé le modèle suivant : AKSM/{__name__}.')
     
     model = '''
-        CREATE TABLE IF NOT EXISTS `Devices` (
+        CREATE TABLE IF NOT EXISTS `devices` (
         `id` int UNSIGNED NOT NULL AUTO_INCREMENT,
         `hash` varchar(511) NOT NULL COMMENT "Identifiant unique de l'équipement.",
         `full_name` varchar(255) DEFAULT NULL COMMENT "Nom complet de l'équipement.",
